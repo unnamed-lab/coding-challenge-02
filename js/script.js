@@ -18,7 +18,6 @@ for (let i = 0; i < circleSmallIcons.length; i++) {
   circleSmallIcons[i].innerHTML = svgCheck;
 }
 
-
 /*  Setup the error state   */
 
 //  Returns false if the input type is valid and true vice versa
@@ -43,7 +42,6 @@ const invalidInput = function () {
   }
 };
 
-
 /*  Setup modal popup   */
 
 const modalPopUp = function (bool = true) {
@@ -58,13 +56,12 @@ const modalPopUp = function (bool = true) {
   }
 };
 
-
 /* Update email preview in success slide */
 
-const userEmailAddress = document.querySelector("#yourEmail");
-
-userEmailAddress.textContent = inputEmail.value;
-
+let userEmailAddress = document.querySelector("#yourEmail");
+const updateEmailPreview = function (input) {
+  userEmailAddress.textContent = input;
+};
 
 /*  Setup Event Listeners   */
 
@@ -83,5 +80,6 @@ window.addEventListener("keydown", function (e) {
 //  Removes the modal when the submit button is pressed
 submitBtn.addEventListener("click", function () {
   invalidInput();
+  updateEmailPreview(inputEmail.value);
   if (invalidInput() === true) modalPopUp(true);
 });
