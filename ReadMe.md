@@ -71,6 +71,15 @@ const modalPopUp = function (bool = true) {
 };
 ```
 
+### Update Modal Email Display
+```
+/* Update email preview in success slide */
+
+const userEmailAddress = document.querySelector("#yourEmail");
+
+userEmailAddress.textContent = inputEmail.value;
+```
+
 ### Event Listeners
 ```
 /*  Setup Event Listeners   */

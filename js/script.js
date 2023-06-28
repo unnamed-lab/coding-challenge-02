@@ -59,6 +59,13 @@ const modalPopUp = function (bool = true) {
 };
 
 
+/* Update email preview in success slide */
+
+const userEmailAddress = document.querySelector("#yourEmail");
+
+userEmailAddress.textContent = inputEmail.value;
+
+
 /*  Setup Event Listeners   */
 
 //  Removes the modal when the dismiss button is pressed
